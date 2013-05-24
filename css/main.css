@@ -227,13 +227,13 @@ main > section
     width:648px;
 }
 
-main > section#diagram-explainer ol
+main > section ol
 {
   list-style-type: none;
   display:table;
 }
 
-main > section#diagram-explainer li
+main > section ol li
 {
   font-size:20px;
   min-height:29px;
@@ -241,7 +241,7 @@ main > section#diagram-explainer li
   display:table-row;
 }
 
-main > section#diagram-explainer li span
+main > section ol li span
 {
   display:table-cell;
   min-height:29px;
@@ -249,12 +249,12 @@ main > section#diagram-explainer li span
   padding-bottom:20px;
 }
 
-main > section#diagram-explainer li span:first-child
+main > section ol li span:first-child
 {
   padding-bottom:4px;
 }
 
-main > section#diagram-explainer li:last-child span
+main > section ol li:last-child span
 {
   padding-bottom:0px;
   margin-bottom:0px;
