@@ -227,13 +227,13 @@ main > section
     width:648px;
 }
 
-main > section ol
+main > section#diagram-explainer ol
 {
   list-style-type: none;
   display:table;
 }
 
-main > section li
+main > section#diagram-explainer li
 {
   font-size:20px;
   min-height:29px;
@@ -241,7 +241,7 @@ main > section li
   display:table-row;
 }
 
-main > section li span
+main > section#diagram-explainer li span
 {
   display:table-cell;
   min-height:29px;
@@ -249,12 +249,12 @@ main > section li span
   padding-bottom:20px;
 }
 
-main > section li span:first-child
+main > section#diagram-explainer li span:first-child
 {
   padding-bottom:4px;
 }
 
-main > section li:last-child span
+main > section#diagram-explainer li:last-child span
 {
   padding-bottom:0px;
   margin-bottom:0px;
@@ -357,9 +357,21 @@ main > section > p
   padding-top:0;
 }
 
+#contribute form
+{
+  border:1px solid #ccc;
+  padding:20px;
+}
+
+#email,
+#comment
+{
+  width:100%;
+  font-size:14px;
+}
+
 main > section > footer
 {
-  border-top:1px solid #ccc;
   padding-top:20px;
   margin-top:20px;
   margin: 0 auto;
