@@ -192,6 +192,9 @@ main header > div > div.databaseimg
   background:transparent url("../img/database.png") no-repeat bottom center;
 }
 
+
+
+
 main header .alpha
 {
     font-size:24px;
@@ -201,7 +204,12 @@ main header .alpha
     left:3px;
 }
 
-main li .alpha
+main .button
+{
+  margin-top:10px;
+}
+
+main .button .alpha
 {
     font-size:16px;
     color:rgba(0,0,0,0.3);
@@ -212,24 +220,96 @@ main li .alpha
 
 main > section
 {
-    background:#fff;
     margin:0;
     padding:10px;
     min-height:500px;
-    width:600px;
     margin:0 auto;
+    width:648px;
 }
 
-main > section ul
+main > section ol
 {
   list-style-type: none;
-  padding-bottom:10px;
+  display:table;
 }
 
-main > section li a
+main > section li
+{
+  font-size:20px;
+  min-height:29px;
+  margin-bottom:20px;
+  display:table-row;
+}
+
+main > section li span
+{
+  display:table-cell;
+  min-height:29px;
+  vertical-align: top;
+  padding-bottom:20px;
+}
+
+main > section li span:first-child
+{
+  padding-bottom:4px;
+}
+
+main > section li:last-child span
+{
+  padding-bottom:0px;
+  margin-bottom:0px;
+}
+
+.number
+{
+  width:29px;
+  float:left;
+  margin-right:10px;
+}
+
+.number-1
+{
+  background:transparent url("../img/numbers.png") no-repeat top left;
+}
+
+.number-2
+{
+  background:transparent url("../img/numbers.png") no-repeat top right;
+}
+
+.number-3
+{
+  background:transparent url("../img/numbers.png") no-repeat bottom right;
+}
+
+.number-4
+{
+  background:transparent url("../img/numbers.png") no-repeat bottom left;
+}
+
+#diagram-explainer
+{
+  border-top:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+  margin-bottom:20px;
+  margin-top:40px;
+}
+
+#diagram
+{
+  margin-top:40px;
+  margin-bottom:40px;
+}
+
+.button a
+{
+  margin:0;
+}
+
+main > section .button a
 {
     background:rgb(131,180,26);
-    margin:10px auto;
+    margin:0px;
     border:1px solid $yellow_light_alpha40;
     font-family: 'Average', serif;
     font-size:24px;
@@ -251,14 +331,14 @@ main > section li a
     display: block;
 }
 
-main > section li a,
-main > section li a:visited
+main > section .button a,
+main > section .button a:visited
 {
   text-decoration:none;
   color:rgb(255,246,177);
 }
 
-main > section li a:hover
+main > section .button a:hover
 {
     color:rgb(255,235,27);
     border:1px solid rgb(255,235,27);
@@ -279,13 +359,12 @@ main > section > p
 
 main > section > footer
 {
-  border-top:1px solid rgba(0,0,0,0.1);
+  border-top:1px solid #ccc;
   padding-top:20px;
   margin-top:20px;
-  width: 560px;
   margin: 0 auto;
-  margin-left: 40px;
   font-size:13px;
+  text-align: center;
 }
 
 main > section > footer > p
