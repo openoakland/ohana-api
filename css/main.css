@@ -286,6 +286,11 @@ main > section ol li
   display:table-row;
 }
 
+main > section ul li
+{
+  margin-bottom:20px;  
+}
+
 main > section ol li span
 {
   display:table-cell;
