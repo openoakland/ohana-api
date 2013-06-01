@@ -398,7 +398,10 @@ main > section > footer > p
   margin-right:20px;
 }
 
-
+footer .share-btns div
+{
+  display:inline-block;
+}
 
 
 
