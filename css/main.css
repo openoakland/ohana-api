@@ -131,17 +131,18 @@ html,body,main
 {
   margin:0;
   padding:0;
-  font-family:georgia,arial, sans-serif;
+  font-family:'Quattrocento', serif;
+  font-size:18px;
 }
 
-main header
+header
 {
     margin:0;
     padding:0;
     font-size:64px;
-    font-family:'Average';
+    font-family:'Quattrocento', serif;
     text-align: center;
-    background:rgb(5,150,213);
+    background:rgb(5,150,213) url('../img/texture.png');
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
     border-bottom: 1px solid rgba(5, 150, 213, 0.3);
     position: relative;
@@ -149,14 +150,14 @@ main header
     color:rgb(3,73,126);
 }
 
-main header > h1
+header > h1
 {
   margin:0;
   padding:0;
   padding-left: 45px;
 }
 
-main header > h2
+header > h2
 {
   font-size: 36px;
   margin-top: 0;
@@ -164,9 +165,10 @@ main header > h2
   color: rgba(255,255,255,0.5);
   letter-spacing: 8px;
   margin-bottom: 45px;
+  font-weight:normal;
 }
 
-main header > div
+header > div
 {
   width: 300px;
   display: inline-block;
@@ -177,28 +179,29 @@ main header > div
   padding-top:10px;
 }
 
-main header > div > h2
+header > div > h2
 {
   color:rgb(255,246,177);
+  font-weight:normal;
 }
 
-main header > div > div
+header > div > div
 {
   height:160px;
   position:relative;
 }
 
-main header > div > div.familyimg
+header > div > div.familyimg
 {
   background:transparent url("../img/family.png") no-repeat bottom center;
 }
 
-main header > div > div.communityimg
+header > div > div.communityimg
 {
   background:transparent url("../img/community.png") no-repeat bottom center;
 }
 
-main header > div > div.databaseimg
+header > div > div.databaseimg
 {
   background:transparent url("../img/database.png") no-repeat bottom center;
 }
@@ -206,13 +209,19 @@ main header > div > div.databaseimg
 
 
 
-main header .alpha
+header .alpha
 {
     font-size:24px;
     color:rgba(0,0,0,0.2);
     position: relative;
     top:-37px;
     left:3px;
+}
+
+main
+{
+  position: relative;
+  z-index: 99997;
 }
 
 main .button
@@ -232,10 +241,35 @@ main .button .alpha
 main > section
 {
     margin:0;
+    padding:0;
+    padding-bottom:20px;
+    padding-top:20px;
+}
+
+main > section > div
+{
+    width:662px;
     padding:10px;
-    min-height:500px;
     margin:0 auto;
-    width:648px;
+}
+
+main > section > div h1
+{
+  font-size:36px;
+  font-family: 'Quattrocento', serif;
+  margin:0;
+}
+
+main > section > div h2
+{
+  font-size:24px;
+  font-family: 'Quattrocento', serif;
+}
+
+main > section > div h3
+{
+  font-size:18px;
+  font-family: 'Quattrocento', serif;
 }
 
 main > section ol
@@ -298,22 +332,6 @@ main > section ol li:last-child span
   background:transparent url("../img/numbers.png") no-repeat bottom left;
 }
 
-#diagram-explainer
-{
-  border-top:1px solid #ccc;
-  border-bottom:1px solid #ccc;
-  margin-bottom:20px;
-  margin-top:40px;
-}
-
-#diagram
-{
-  margin-top:20px;
-  margin-bottom:20px;
-  padding-bottom:20px;
-  border-bottom:1px solid #ccc;
-}
-
 .button a
 {
   margin:0;
@@ -321,14 +339,22 @@ main > section ol li:last-child span
 
 main > section .button a
 {
-    background:rgb(131,180,26);
     margin:0px;
     border:1px solid $yellow_light_alpha40;
-    font-family: 'Average', serif;
+    font-family: 'Quattrocento', serif;
     font-size:24px;
     letter-spacing: 2px;
     border-radius: 13px;
     padding:16px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.40000000596046);    
+    border:1px solid rgb(255,235,255);
+    cursor:pointer;
+    margin-right: 20px;
+    display: block;
+}
+
+.external a
+{
     background: rgb(131,180,26); /* Old browsers */
     background: -moz-linear-gradient(top,  rgba(131,180,26,1) 0%, rgba(119,163,24,1) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(131,180,26,1)), color-stop(100%,rgba(119,163,24,1))); /* Chrome,Safari4+ */
@@ -337,11 +363,19 @@ main > section .button a
     background: -ms-linear-gradient(top,  rgba(131,180,26,1) 0%,rgba(119,163,24,1) 100%); /* IE10+ */
     background: linear-gradient(to bottom,  rgba(131,180,26,1) 0%,rgba(119,163,24,1) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#83b41a', endColorstr='#77a318',GradientType=0 ); /* IE6-9 */
-    box-shadow: 0px 0px 5px rgba(0,0,0,0.40000000596046);    
-    border:1px solid rgb(255,235,255);
-    cursor:pointer;
-    margin-right: 20px;
-    display: block;
+}
+
+.internal a
+{
+  background: rgb(5,150,213); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(5,150,213,1) 0%, rgba(5,122,173,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(5,150,213,1)), color-stop(100%,rgba(5,122,173,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(5,150,213,1) 0%,rgba(5,122,173,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(5,150,213,1) 0%,rgba(5,122,173,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(5,150,213,1) 0%,rgba(5,122,173,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(5,150,213,1) 0%,rgba(5,122,173,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0596d5', endColorstr='#057aad',GradientType=0 ); /* IE6-9 */
+
 }
 
 main > section .button a,
@@ -370,10 +404,53 @@ main > section > p
   padding-top:0;
 }
 
+#external-links
+{
+}
+
+#roadmap
+{
+  background:rgb(145, 213, 243) url('../img/texture.png');
+  border-top:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+  position: relative;
+  z-index: 99997;
+}
+
+#diagram
+{
+  padding-top:40px;
+  padding-bottom:20px;
+}
+
+#roadmap h1 span,
+#contribute h1 span,
+#challenges h1 span
+{
+  /*background-color:rgb(207, 255, 189);*/
+  font-size:72px;
+}
+
 #contribute form
 {
   border:1px solid #ccc;
   padding:20px;
+  background:rgb(255, 255, 255)  url('../img/texture.png');
+}
+
+#contribute button
+{
+  float:right;
+  font-size: 18px;
+  border-radius: 10px;
+  border: 1px solid white;
+  padding: 10px;
+}
+
+#contribute button:hover
+{
+  border: 1px solid black;
+  cursor:pointer;
 }
 
 #email,
@@ -383,7 +460,37 @@ main > section > p
   font-size:14px;
 }
 
-main > section > footer
+
+#challenges
+{
+  background:rgb(255, 198, 97) url('../img/texture.png');
+}
+#challenges figure
+{
+  width:662px;
+  margin:0;
+  padding:0;
+}
+
+#challenges figcaption
+{
+  font-style: italic;
+  font-size:12px;
+  margin-top:10px;
+}
+
+#challenges hr
+{
+  border:0;
+  border-bottom:1px solid #000;
+}
+
+#challenges p
+{
+  padding-left:20px;
+}
+
+footer
 {
   padding-top:20px;
   margin-top:20px;
@@ -392,7 +499,7 @@ main > section > footer
   text-align: center;
 }
 
-main > section > footer > p
+footer > p
 {
   margin-left:20px;
   margin-right:20px;
