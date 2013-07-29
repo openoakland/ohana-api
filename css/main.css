@@ -643,11 +643,80 @@ textarea[contenteditable] {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 800px) {
-    /* Style adjustments for viewports that meet the condition */
-}
+/* #Media Queries
+================================================== */
 
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-       only screen and (min-resolution: 144dpi) {
+  /* Smaller than standard 960 (devices and browsers) */
+  @media only screen and (max-width: 959px) {
+
+  }
+
+  /* Tablet Portrait size to standard 960 (devices and browsers) */
+  @media only screen and (min-width: 768px) and (max-width: 959px) {
+
+  }
+
+  @media only screen and (max-width: 767px) {
     /* Style adjustments for viewports that meet the condition */
-}
+
+    #forkongithub
+    {
+      position:static;
+    }
+
+    #forkongithub a
+    {
+      transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      top:0px;
+      right:0px;
+      width:100%;
+      display:block;
+      padding: 5px 0px;
+    }
+
+    header
+    {
+      margin-top:46px;
+    }
+
+    header > h1
+    {
+      font-size:42px;
+    }
+
+    header > h2
+    {
+      font-size:20px;
+      letter-spacing: 0px;
+    }
+
+    header .alpha
+    {
+      top: -15px;
+      font-size:14px;
+    }
+
+    main > section .button a
+    {
+      letter-spacing:0px;
+      font-size:18px;
+    }
+
+    main > section > div,
+    #challenges figure
+    {
+      width:auto;
+    }
+
+    #diagram img,
+    #challenges img
+    {
+      width:100%;
+    }
+  }
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+         only screen and (min-resolution: 144dpi) {
+      /* Style adjustments for viewports that meet the condition */
+  }
