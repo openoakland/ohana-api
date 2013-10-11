@@ -1,0 +1,14 @@
+#----------------------------------------------------------------------------
+# Ignore these files when commiting to a git repository.
+#
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+#----------------------------------------------------------------------------
+
+/tmp/*
+
+# various artifacts
+**.war
+*.rbc
+*.sassc
+.sass-cache
+/cache
