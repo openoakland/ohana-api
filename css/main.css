@@ -148,8 +148,11 @@ textarea {
   position: absolute;
   top: 60px;
   right: -60px;
-  transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
   z-index: 99999; }
 
@@ -172,79 +175,18 @@ header {
     margin-left: -480px;
     background: url("../img/ohana-logo.png");
     background-attachment: fixed;
-    background-position-x: 50%;
+    background-position: 50% 0%;
     width: 960px;
     height: 274px;
     background-repeat: no-repeat;
+    color: #fff;
     color: rgba(255, 255, 255, 0);
-    font-size: 1px; }
+    font-size: 1px;
+    overflow: visible;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
 
-      /*
-    > div
-    {
-
-      background-color: rgba(5,150,213,0.5);
-      font-size:64px;
-      font-family:'Quattrocento', serif;
-      text-align: center;
-      background:rgb(12,148,210);
-
-      //box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-      border-bottom: 1px solid rgba(5, 150, 213, 0.3);
-      position: relative;
-      z-index: 99998;
-      color:rgb(3,73,126);
-
-      > h1
-      {
-        margin:0;
-        padding:0;
-        padding-left: 45px;
-      }
-
-      > div > h2
-      {
-        color:rgb(255,246,177);
-        font-weight:normal;
-      }
-
-
-      /*
-      > div
-      {
-        width: 300px;
-        display: inline-block;
-        vertical-align: top;
-        font-size:16px;
-        border-top:7px solid rgba(255,255,255,0.7);
-        color:rgba(255,255,255,0.7);
-        padding-top:10px;
-      }
-
-
-      > div > div
-      {
-        height:160px;
-        position:relative;
-      }
-
-      > div > div.familyimg
-      {
-        background:transparent url("../img/family.png") no-repeat bottom center;
-      }
-
-      > div > div.communityimg
-      {
-        background:transparent url("../img/community.png") no-repeat bottom center;
-      }
-
-      > div > div.databaseimg
-      {
-        background:transparent url("../img/database.png") no-repeat bottom center;
-      }
-    }
-}
-*/
 main {
   position: relative;
   min-width: 960px;
@@ -271,6 +213,7 @@ main #talking-points {
   main #talking-points > .content {
     max-width: 900px;
     font-size: 22px;
+    color: #fff;
     color: rgba(255, 255, 255, 0.7);
     padding: 100px;
     margin: 0 auto; }
@@ -297,6 +240,7 @@ main #external-links {
     margin-left: -80px;
     max-width: 400px;
     font-size: 22px;
+    color: #fff;
     color: rgba(0, 0, 0, 0.7);
     padding: 40px; }
     main #external-links > .content > h2 {
@@ -317,6 +261,7 @@ main #roadmap {
   main #roadmap > .content {
     max-width: 800px;
     font-size: 22px;
+    color: #fff;
     color: rgba(255, 255, 255, 0.7);
     padding: 100px;
     margin: 0 auto; }
@@ -358,6 +303,7 @@ main #contribute {
 #contribute form input, #contribute form textarea {
   margin-bottom: 10px;
   border: none;
+  background: #ccc;
   background: rgba(181, 72, 104, 0.1);
   width: 100%;
   padding: 10px; }
@@ -617,8 +563,11 @@ textarea[contenteditable] {
     position: static; }
 
   #forkongithub a {
-    transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
     top: 0px;
     right: 0px;
     width: 100%;
