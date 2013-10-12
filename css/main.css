@@ -264,10 +264,25 @@ main #roadmap {
     color: #fff;
     color: rgba(255, 255, 255, 0.7);
     padding: 100px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    text-align: center; }
     main #roadmap > .content > h2 {
       font-size: 36px;
       color: white; }
+    main #roadmap > .content p {
+      width: 600px;
+      margin: 0 auto; }
+    main #roadmap > .content > div {
+      margin-bottom: 40px; }
+    main #roadmap > .content #smcconnect {
+      background: url("../img/smcconnect.png");
+      width: 600px;
+      height: 370px;
+      background-repeat: no-repeat;
+      margin: 20px auto;
+      -webkit-box-shadow: 0px 0px 5px #333333;
+      -moz-box-shadow: 0px 0px 5px #333333;
+      box-shadow: 0px 0px 5px #333333; }
 
 main #contribute {
   background: url("../img/dot.png"), url("../img/dot.png");
@@ -528,6 +543,11 @@ textarea[contenteditable] {
 /* Smaller than standard 960 (devices and browsers) */
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
+  header {
+    padding-top: 168px; }
+    header #logo {
+      background-image: url("../img/ohana-logo-mid.png"); }
+
   main,
   main > section {
     min-width: 100%;
@@ -574,13 +594,15 @@ textarea[contenteditable] {
     display: block;
     padding: 5px 0px; }
 
-  header #logo {
-    background-size: contain;
-    background-position: 0px 60px;
-    width: 100%;
-    margin: 0;
-    left: 50%;
-    margin-left: -50%; }
+  header {
+    padding-top: 180px; }
+    header #logo {
+      background-image: url("../img/ohana-logo-sm.png");
+      background-position: center 60px;
+      width: 100%;
+      margin: 0;
+      left: 50%;
+      margin-left: -50%; }
 
   main,
   main > section {
@@ -608,6 +630,11 @@ textarea[contenteditable] {
 
   main #contribute {
     padding-top: 0px; }
+
+  main #roadmap p {
+    width: 100% !important; }
+  main #roadmap #smcconnect {
+    display: none; }
 
   #database {
     display: none; }

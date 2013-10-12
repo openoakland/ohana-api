@@ -299,11 +299,33 @@ main #roadmap
     color:rgba(255,255,255,0.7);
     padding:100px;
     margin:0 auto;
+    text-align:center;
 
     >h2
     {
       font-size:36px;
       color:rgb(255,255,255);
+    }
+
+    p
+    {
+      width:600px;
+      margin:0 auto;
+    }
+
+    >div
+    {
+      margin-bottom:40px;
+    }
+
+    #smcconnect
+    {
+      background:url('../img/smcconnect.png');
+      width:600px;
+      height:370px;
+      background-repeat:no-repeat;
+      margin:20px auto;
+      @include single-box-shadow();
     }
   }
 }
@@ -613,6 +635,15 @@ textarea[contenteditable] {
   /* Tablet Portrait size to standard 960 (devices and browsers) */
   @media only screen and (min-width: 768px) and (max-width: 959px) {
 
+    header
+    {
+      padding-top:168px;
+      #logo
+      {
+        background-image:url('../img/ohana-logo-mid.png');
+      }
+    }
+
     main,
     main > section
     {
@@ -669,10 +700,11 @@ textarea[contenteditable] {
 
     header
     {
+      padding-top:180px;
       #logo
       {
-        background-size: contain;
-        background-position:0px 60px;
+        background-image:url('../img/ohana-logo-sm.png');
+        background-position:center 60px;
         width:100%;
         margin:0;
         left:50%;
@@ -707,6 +739,19 @@ textarea[contenteditable] {
     main #contribute
     {
       padding-top:0px
+    }
+
+    main #roadmap
+    {
+      p
+      {
+        width:100% !important;
+      }
+
+      #smcconnect
+      {
+        display:none;
+      }
     }
 
     #database
