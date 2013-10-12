@@ -612,6 +612,10 @@ textarea[contenteditable] {
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
 
+  main #contribute,
+  main #external-links {
+    background: none; }
+
   main #talking-points > .content,
   main #roadmap > .content,
   main #contribute > .content,

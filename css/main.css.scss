@@ -720,6 +720,12 @@ textarea[contenteditable] {
       @include box-sizing(border-box);
     }
 
+    main #contribute,
+    main #external-links
+    {
+      background:none;
+    }
+
     main #talking-points > .content,
     main #roadmap > .content,
     main #contribute > .content,
