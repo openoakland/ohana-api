@@ -350,6 +350,22 @@ main #contribute {
   border: 1px solid black;
   cursor: pointer; }
 
+#press {
+  margin: 0 auto; }
+  #press > .content {
+    max-width: 800px;
+    font-size: 22px;
+    padding: 80px;
+    margin: 0 auto;
+    border-bottom: 1px solid #000; }
+    #press > .content > h1 {
+      font-size: 36px; }
+    #press > .content ul {
+      margin-top: 10px; }
+    #press > .content li {
+      margin-bottom: 10px;
+      font-size: 22px; }
+
 main .button {
   margin-top: 20px;
   display: -moz-inline-stack;

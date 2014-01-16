@@ -415,6 +415,35 @@ main #contribute
   cursor:pointer;
 }
 
+#press
+{
+  margin:0 auto;
+
+  > .content
+  {
+    max-width:800px;
+    font-size:22px;
+    padding:80px;
+    margin:0 auto;
+    border-bottom:1px solid #000;
+
+    >h1
+    {
+      font-size:36px;
+    }
+
+    ul
+    {
+      margin-top:10px;
+    }
+    li
+    {
+      margin-bottom:10px;
+      font-size:22px;
+    }
+  }
+}
+
 
 main .button
 {
@@ -495,8 +524,6 @@ footer .share-btns div
 {
   display:inline-block;
 }
-
-
 
 
 
