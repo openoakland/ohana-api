@@ -9,7 +9,8 @@ else
 end
 
 Geocoder.configure(
-  :lookup => :google,
+  :lookup => :geocoder_ca,
+  :api_key => ENV["GEOCODER_CA"],
   :cache => REDIS,
   :always_raise => [Geocoder::OverQueryLimitError,
     Geocoder::RequestDenied,

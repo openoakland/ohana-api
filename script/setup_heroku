@@ -46,9 +46,9 @@ then
 
   echo "All done setting up env vars and add-ons."
   echo "Pushing code to Heroku now. This will take a few minutes..."
-  git push heroku master
+  git push heroku alameda-county:master
 
-  heroku run script/setup_db --app $herokuApp
+  heroku run script/setup_ac_db --app $herokuApp
 else
   echo "Please add your Heroku app name to the end of the command."
   echo "Usage: setup_heroku your_app_name"

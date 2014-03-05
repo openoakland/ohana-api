@@ -60,6 +60,11 @@ You can also try it from the Rails console, mimicking how the API would do it wh
 ## Deploying to Heroku
 See the [Wiki](https://github.com/codeforamerica/ohana-api/wiki/How-to-deploy-the-Ohana-API-to-your-Heroku-account).
 
+** OpenOakland Note: **
+Heroku deploys off the master branch and our repo is using our own `alameda-county` branch.
+Please push from `alameda-county` to master by doing the following:
+`git push heroku alameda-county:master`
+
 ## Installation
 Please note that the instructions below have only been tested on OS X. If you are running another operating system and run into any issues, feel free to update this README, or open an issue if you are unable to resolve installation issues.
 
