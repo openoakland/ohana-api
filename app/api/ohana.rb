@@ -84,6 +84,16 @@ module Ohana
         present loc, with: Entities::Location
       end
 
+      desc "Delete a location"
+      params do
+        requires :id, type: String, desc: "Location ID"
+      end
+      delete ':id' do
+        authenticate!
+        loc = Location.find(params[:id])
+        loc.destroy
+      end
+
       desc "Create a location"
       post do
         authenticate!
@@ -108,6 +118,17 @@ module Ohana
             #end
           end
         end
+
+        resource '/services' do
+          desc "Create a new service for this location"
+          post do
+            authenticate!
+            location = Location.find(params[:locations_id])
+            location.services.create!(params)
+            location.services.last
+          end
+        end
+
 
         resource '/contacts' do
           desc "Delete all contacts for a location"

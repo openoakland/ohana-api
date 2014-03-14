@@ -339,7 +339,9 @@ describe Ohana::API do
         json["message"].should include "Description can't be blank"
       end
 
-      it "requires short description" do
+      # Enable this test if you would like to require a short description
+      # Remove the "x" before "it" to enable the test.
+      xit "requires short description" do
         put "api/locations/#{@loc.id}",
           { :short_desc => "" },
           { 'HTTP_X_API_TOKEN' => @token }
@@ -348,7 +350,9 @@ describe Ohana::API do
         json["message"].should include "Short desc can't be blank"
       end
 
-      it "limits short description to 200 characters" do
+      # Enable this test if you want to limit the short description's length
+      # Remove the "x" before "it" to enable the test.
+      xit "limits short description to 200 characters" do
         put "api/locations/#{@loc.id}",
           { :short_desc => "A 6 month residential co-ed treatment program
             designed to provide homeless veterans with the skills necessary
@@ -590,6 +594,69 @@ describe Ohana::API do
           { 'HTTP_X_API_TOKEN' => ENV["ADMIN_APP_TOKEN"] }
         expect(response.status).to eq(201)
         json.should_not include "foo"
+      end
+    end
+
+    describe "Create a service for a location (POST /api/locations/:id/services)" do
+      before(:each) do
+        @loc = create(:location)
+        @service_attributes = {
+          :fees => "new fees",
+          :audience => "new audience",
+          :keywords => ["food", "youth"]
+        }
+      end
+
+      it "doesn't allow setting non-whitelisted attributes" do
+        post "api/locations/#{@loc.id}/services",
+          @service_attributes.merge(foo: "bar"),
+          { 'HTTP_X_API_TOKEN' => ENV["ADMIN_APP_TOKEN"] }
+        expect(response.status).to eq(201)
+        json.should_not include "foo"
+      end
+
+      it "allows setting whitelisted attributes" do
+        post "api/locations/#{@loc.id}/services",
+          @service_attributes,
+          { 'HTTP_X_API_TOKEN' => ENV["ADMIN_APP_TOKEN"] }
+        json["audience"].should == "new audience"
+        json["fees"].should == "new fees"
+        json["keywords"].should == ["food", "youth"]
+      end
+
+      it "sets service_areas to empty array if empty string" do
+        post "api/locations/#{@loc.id}/services",
+          @service_attributes.merge(services_areas: ""),
+          { 'HTTP_X_API_TOKEN' => ENV["ADMIN_APP_TOKEN"] }
+        json["service_areas"].should == []
+      end
+
+      it "sets service_areas to empty array if nil" do
+        post "api/locations/#{@loc.id}/services",
+          @service_attributes.merge(services_areas: nil),
+          { 'HTTP_X_API_TOKEN' => ENV["ADMIN_APP_TOKEN"] }
+        json["service_areas"].should == []
+      end
+    end
+
+    describe "DELETE api/locations/:id" do
+      before :each do
+        service = create(:service)
+        @service_id = service.id
+        @location = service.location
+        @id = @location.id
+        delete "api/locations/#{@id}", {},
+          { 'HTTP_X_API_TOKEN' => ENV["ADMIN_APP_TOKEN"] }
+      end
+
+      it "deletes the location" do
+        get "api/locations/#{@id}"
+        expect(response.status).to eq(404)
+      end
+
+      it "deletes the service too" do
+        expect { Service.find(@service_id) }.
+          to raise_error(Mongoid::Errors::DocumentNotFound)
       end
     end
 
